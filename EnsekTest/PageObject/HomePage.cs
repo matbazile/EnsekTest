@@ -18,17 +18,10 @@ namespace EnsekTest.PageObject
 
         #region Mappings
 
-        [FindsBy(How = How.XPath, Using = "//input[@name='name']")]
-        public IWebElement textBoxFullName;
+        [FindsBy(How = How.XPath, Using = "//a[@id='registerLink']")]
+        public IWebElement registerLink;
 
-        [FindsBy(How = How.XPath, Using = "//input[@type='submit']")]
-        public IWebElement submit;
-
-        [FindsBy(How = How.XPath, Using = "//input[@name='email']")]
-        public IWebElement email;
-
-
-
+        
 
 
         #endregion
@@ -41,26 +34,20 @@ namespace EnsekTest.PageObject
 
         #endregion
 
-        public void Fill()
+      public void GoToRegister()
         {
-            //Thread.Sleep(3000);
-            textBoxFullName.SendKeys("Testing");
-            email.SendKeys("test@gmail.com");
-            BrowserHelper.scrollDown();
-            submit.Click();
-            BrowserHelper.scrollUp();
-
+            registerLink.Click();
         }
 
 
-        public static bool Submitted
+        public static bool homepagetitle
         {
             get
             {
                 try
                 {
-                    var confirmation = ObjectRepository.driver.FindElement(By.XPath("//div[contains(@class,'alert-success')]"));
-                    return confirmation.Displayed;
+                    var homepagetitle  = ObjectRepository.driver.FindElement(By.XPath("//h1[contains(text(),'ENSEK Energy Corp.')]"));
+                    return homepagetitle.Displayed;
                 }
                 catch
                 {
