@@ -77,6 +77,7 @@
     <Compile Include="CustomException\NoSuitableDriverFound.cs" />
     <Compile Include="Interfaces\IConfig.cs" />
     <Compile Include="PageObject\HomePage.cs" />
+    <Compile Include="PageObject\RegisterPage.cs" />
     <Compile Include="Settings\AppConfigKeys.cs" />
     <Compile Include="Settings\ObjectRepository.cs" />
     <Compile Include="TestScripts\Testcase\DashboardTest.cs" />
