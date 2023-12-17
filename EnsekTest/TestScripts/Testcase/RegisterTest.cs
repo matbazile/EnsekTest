@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace EnsekTest.TestScripts.Testcase
 {
     [TestClass]
-    public class DashboardTest
+    public class RegisterTest
     {
         [TestMethod]
         public void Register()
